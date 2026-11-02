@@ -1,0 +1,269 @@
+{
+  "captured_at": "2026-10-30T19:56:57.433432+00:00",
+  "counts": {
+    "dim_date": 108,
+    "dim_conference": 2,
+    "dim_division": 4,
+    "dim_team": 32,
+    "dim_player": 1123,
+    "fact_game": 546,
+    "fact_goal": 3475,
+    "fact_standings": 288
+  },
+  "quality": [
+    {
+      "check_name": "game_scores_nonnegative",
+      "severity": "error",
+      "passed": true,
+      "expected": "0",
+      "actual": "0"
+    },
+    {
+      "check_name": "games_volume",
+      "severity": "error",
+      "passed": true,
+      "expected": "546",
+      "actual": "546"
+    },
+    {
+      "check_name": "game_teams_resolved",
+      "severity": "error",
+      "passed": true,
+      "expected": "0",
+      "actual": "0"
+    },
+    {
+      "check_name": "goal_coordinates_on_rink",
+      "severity": "error",
+      "passed": true,
+      "expected": "0",
+      "actual": "0"
+    },
+    {
+      "check_name": "goal_coordinates_present",
+      "severity": "warning",
+      "passed": true,
+      "expected": "0",
+      "actual": "0"
+    },
+    {
+      "check_name": "goal_scorer_resolved",
+      "severity": "error",
+      "passed": true,
+      "expected": "0",
+      "actual": "0"
+    },
+    {
+      "check_name": "goals_volume",
+      "severity": "error",
+      "passed": true,
+      "expected": "3475",
+      "actual": "3475"
+    },
+    {
+      "check_name": "one_current_team_version",
+      "severity": "error",
+      "passed": true,
+      "expected": "0",
+      "actual": "0"
+    },
+    {
+      "check_name": "per_game_goals_reconciled",
+      "severity": "error",
+      "passed": true,
+      "expected": "0",
+      "actual": "0"
+    },
+    {
+      "check_name": "player_scd_intervals",
+      "severity": "error",
+      "passed": true,
+      "expected": "0",
+      "actual": "0"
+    },
+    {
+      "check_name": "player_team_resolved",
+      "severity": "error",
+      "passed": true,
+      "expected": "0",
+      "actual": "0"
+    },
+    {
+      "check_name": "standings_points_non_negative",
+      "severity": "error",
+      "passed": true,
+      "expected": "0",
+      "actual": "0"
+    },
+    {
+      "check_name": "standings_volume",
+      "severity": "error",
+      "passed": true,
+      "expected": "288",
+      "actual": "288"
+    },
+    {
+      "check_name": "team_scd_intervals",
+      "severity": "error",
+      "passed": true,
+      "expected": "0",
+      "actual": "0"
+    },
+    {
+      "check_name": "wins_not_above_games_played",
+      "severity": "error",
+      "passed": true,
+      "expected": "0",
+      "actual": "0"
+    }
+  ],
+  "manifest": [
+    {
+      "snapshot_id": "57d30b91-fdab-42fc-9b2e-cc474533b335",
+      "games": 546,
+      "goals": 3475,
+      "standings": 288,
+      "created_at": "2026-10-30 19:56:27.607857+00:00"
+    }
+  ],
+  "player_history": [
+    {
+      "player_id": 8470621,
+      "player_name": "C. Perry",
+      "team_abbrev": "TBL",
+      "valid_from": "2026-03-17",
+      "valid_to": "2026-10-03",
+      "is_current": false
+    },
+    {
+      "player_id": 8470621,
+      "player_name": "C. Perry",
+      "team_abbrev": "LAK",
+      "valid_from": "2026-10-03",
+      "valid_to": null,
+      "is_current": true
+    },
+    {
+      "player_id": 8473503,
+      "player_name": "J. Reimer",
+      "team_abbrev": "OTT",
+      "valid_from": "2026-03-18",
+      "valid_to": "2026-10-26",
+      "is_current": false
+    },
+    {
+      "player_id": 8473503,
+      "player_name": "J. Reimer",
+      "team_abbrev": "NYR",
+      "valid_from": "2026-10-26",
+      "valid_to": null,
+      "is_current": true
+    },
+    {
+      "player_id": 8474013,
+      "player_name": "I. Cole",
+      "team_abbrev": "UTA",
+      "valid_from": "2026-03-16",
+      "valid_to": "2026-09-29",
+      "is_current": false
+    },
+    {
+      "player_id": 8474013,
+      "player_name": "I. Cole",
+      "team_abbrev": "CHI",
+      "valid_from": "2026-09-29",
+      "valid_to": null,
+      "is_current": true
+    },
+    {
+      "player_id": 8474141,
+      "player_name": "P. Kane",
+      "team_abbrev": "DET",
+      "valid_from": "2026-03-16",
+      "valid_to": "2026-09-29",
+      "is_current": false
+    },
+    {
+      "player_id": 8474141,
+      "player_name": "P. Kane",
+      "team_abbrev": "CHI",
+      "valid_from": "2026-09-29",
+      "valid_to": null,
+      "is_current": true
+    },
+    {
+      "player_id": 8474189,
+      "player_name": "L. Eller",
+      "team_abbrev": "OTT",
+      "valid_from": "2026-03-18",
+      "valid_to": "2026-09-29",
+      "is_current": false
+    },
+    {
+      "player_id": 8474189,
+      "player_name": "L. Eller",
+      "team_abbrev": "FLA",
+      "valid_from": "2026-09-29",
+      "valid_to": null,
+      "is_current": true
+    },
+    {
+      "player_id": 8474568,
+      "player_name": "L. Schenn",
+      "team_abbrev": "BUF",
+      "valid_from": "2026-04-06",
+      "valid_to": "2026-09-29",
+      "is_current": false
+    },
+    {
+      "player_id": 8474568,
+      "player_name": "L. Schenn",
+      "team_abbrev": "VAN",
+      "valid_from": "2026-09-29",
+      "valid_to": null,
+      "is_current": true
+    }
+  ],
+  "goals_sample": [
+    {
+      "game_id": "2025021062",
+      "event_id": 183,
+      "time_in_period": "05:28",
+      "x": 84,
+      "y": 1,
+      "player_name": "B. Meyers"
+    },
+    {
+      "game_id": "2025021062",
+      "event_id": 306,
+      "time_in_period": "11:52",
+      "x": 83,
+      "y": -5,
+      "player_name": "B. Catton"
+    },
+    {
+      "game_id": "2025021062",
+      "event_id": 313,
+      "time_in_period": "12:07",
+      "x": -72,
+      "y": -7,
+      "player_name": "V. Hinostroza"
+    },
+    {
+      "game_id": "2025021062",
+      "event_id": 394,
+      "time_in_period": "18:24",
+      "x": 87,
+      "y": 5,
+      "player_name": "R. Winterton"
+    },
+    {
+      "game_id": "2025021062",
+      "event_id": 561,
+      "time_in_period": "03:20",
+      "x": -84,
+      "y": -6,
+      "player_name": "K. Kakko"
+    }
+  ]
+}

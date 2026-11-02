@@ -1,0 +1,27 @@
+# Запуск из lab1: docker compose -f docker-compose.yaml -f ../lab2/compose.yaml up -d
+# Дополнение того же проекта, использует уже загруженный ODS.
+services:
+  airflow-apiserver:
+    volumes:
+      - ../lab2/dags:/opt/airflow/dags/lab2:ro
+      - ../lab2:/opt/airflow/lab2:ro
+  airflow-scheduler:
+    volumes:
+      - ../lab2/dags:/opt/airflow/dags/lab2:ro
+      - ../lab2:/opt/airflow/lab2:ro
+  airflow-dag-processor:
+    volumes:
+      - ../lab2/dags:/opt/airflow/dags/lab2:ro
+      - ../lab2:/opt/airflow/lab2:ro
+  airflow-worker:
+    volumes:
+      - ../lab2/dags:/opt/airflow/dags/lab2:ro
+      - ../lab2:/opt/airflow/lab2:ro
+  airflow-triggerer:
+    volumes:
+      - ../lab2/dags:/opt/airflow/dags/lab2:ro
+      - ../lab2:/opt/airflow/lab2:ro
+  airflow-cli:
+    volumes:
+      - ../lab2/dags:/opt/airflow/dags/lab2:ro
+      - ../lab2:/opt/airflow/lab2:ro

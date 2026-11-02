@@ -1,0 +1,1 @@
+PASS: negative points detected, test corruption rolled back, original DQ restored, ODS unchanged

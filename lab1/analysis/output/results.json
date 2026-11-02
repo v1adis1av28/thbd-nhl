@@ -1,0 +1,147 @@
+{
+  "source_url": "https://api-web.nhle.com/v1/standings/2026-10-23",
+  "teams": 32,
+  "division": "Metropolitan",
+  "division_teams": 8,
+  "repeats": 5,
+  "stores": {
+    "PostgreSQL": {
+      "write_median_ms": 2.28,
+      "query_median_ms": 0.77,
+      "write_runs_ms": [
+        4.38,
+        2.28,
+        1.58,
+        1.6,
+        2.43
+      ],
+      "query_runs_ms": [
+        1.37,
+        0.55,
+        0.4,
+        1.18,
+        0.77
+      ]
+    },
+    "MongoDB": {
+      "write_median_ms": 1.32,
+      "query_median_ms": 0.86,
+      "write_runs_ms": [
+        12.66,
+        0.9,
+        1.77,
+        1.05,
+        1.32
+      ],
+      "query_runs_ms": [
+        1.91,
+        0.76,
+        1.05,
+        0.69,
+        0.86
+      ]
+    },
+    "MinIO": {
+      "write_median_ms": 8.2,
+      "query_median_ms": 3.38,
+      "write_runs_ms": [
+        10.52,
+        11.66,
+        8.2,
+        6.04,
+        7.05
+      ],
+      "query_runs_ms": [
+        5.0,
+        3.38,
+        2.64,
+        2.42,
+        5.88
+      ]
+    },
+    "Neo4j": {
+      "write_median_ms": 14.08,
+      "query_median_ms": 6.54,
+      "write_runs_ms": [
+        214.81,
+        10.26,
+        14.08,
+        13.5,
+        14.68
+      ],
+      "query_runs_ms": [
+        118.71,
+        6.54,
+        5.86,
+        5.46,
+        9.45
+      ]
+    }
+  },
+  "ingest_log": [
+    {
+      "dag_id": "nhl_standings_to_postgres",
+      "storage": "minio",
+      "entity": "nhl_standings",
+      "records_loaded": 32,
+      "payload_bytes": 63326,
+      "duration_ms": 1101
+    },
+    {
+      "dag_id": "nhl_standings_to_postgres",
+      "storage": "postgres",
+      "entity": "nhl_standings",
+      "records_loaded": 32,
+      "payload_bytes": 0,
+      "duration_ms": 98
+    },
+    {
+      "dag_id": "espn_nhl_to_minio",
+      "storage": "minio",
+      "entity": "espn_nhl",
+      "records_loaded": 8,
+      "payload_bytes": 88518,
+      "duration_ms": 1787
+    },
+    {
+      "dag_id": "espn_nhl_to_minio",
+      "storage": "minio",
+      "entity": "espn_manifest",
+      "records_loaded": 8,
+      "payload_bytes": 1158,
+      "duration_ms": 143
+    },
+    {
+      "dag_id": "nhl_games_to_mongodb",
+      "storage": "minio",
+      "entity": "nhl_game",
+      "records_loaded": 12,
+      "payload_bytes": 1962107,
+      "duration_ms": 21109
+    },
+    {
+      "dag_id": "nhl_games_to_mongodb",
+      "storage": "mongodb",
+      "entity": "nhl_game",
+      "records_loaded": 12,
+      "payload_bytes": 0,
+      "duration_ms": 358
+    },
+    {
+      "dag_id": "nhl_graph_to_neo4j",
+      "storage": "minio",
+      "entity": "nhl_graph_raw",
+      "records_loaded": 45,
+      "payload_bytes": 948901,
+      "duration_ms": 37646
+    },
+    {
+      "dag_id": "nhl_graph_to_neo4j",
+      "storage": "neo4j",
+      "entity": "nhl_graph",
+      "records_loaded": 1350,
+      "payload_bytes": 0,
+      "duration_ms": 2740
+    }
+  ]
+}

@@ -1,0 +1,7 @@
+# Версии провайдеров фиксирует constraints-файл Airflow 3.3.2 в Dockerfile.
+# neo4j и matplotlib в constraints нет: ставятся совместимые актуальные версии.
+apache-airflow-providers-postgres
+apache-airflow-providers-amazon
+apache-airflow-providers-mongo
+neo4j
+matplotlib
